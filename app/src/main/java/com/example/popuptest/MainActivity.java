@@ -18,8 +18,10 @@ Button bopen;
 
             @Override
             public void onClick(View v) {
-                Intent i=getPackageManager().getLaunchIntentForPackage("com.example.popuptest");
-                startActivity(i);
+                //Intent i=getPackageManager().getLaunchIntentForPackage("com.example.popuptest");
+                //startActivity(i);
+                startService(new Intent(getBaseContext(), AppChecker.class));
+
             }
         });
     }
